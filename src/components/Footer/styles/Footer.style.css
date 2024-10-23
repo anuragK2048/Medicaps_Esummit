@@ -1,0 +1,107 @@
+.footer-distributed {
+  background: black;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  border-top: 2px dashed white;
+  padding: 40px 20px; /* Adjust padding for smaller screens */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between; /* Align items properly */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align to the left */
+  flex: 1; /* Take equal space */
+}
+
+.footer-left {
+  max-width: 400px; /* Limit width */
+}
+
+.footer-logo {
+  width: 100%; /* Make logo responsive */
+  max-width: 200px; /* Set max width for logo */
+}
+
+.footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  margin-right: 10px; /* Add space between links */
+}
+
+.footer-center {
+  flex: 1; /* Take equal space */
+}
+
+.footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-right {
+  flex: 1; /* Take equal space */
+}
+
+.footer-icons {
+  margin-top: 25px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+}
+
+.footer-icons a:hover,
+.footer-links a:hover {
+  color: #f93943; /* Change to your desired hover color */
+  transition: color 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 880px) {
+  .footer-distributed {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    max-width: 100%; /* Allow full width */
+    align-items: center; /* Center items */
+    margin-bottom: 20px; /* Space between sections */
+  }
+
+  .footer-links a {
+    display: block; /* Stack links */
+    margin: 5px 0; /* Add space between links */
+  }
+
+  .footer-icons a {
+    margin: 0 5px; /* Space between icons */
+  }
+}

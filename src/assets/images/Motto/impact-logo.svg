@@ -1,0 +1,107 @@
+<!-- sample rectangle -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<circle id="outer-circle" cx="100" cy="100" r="90" fill="#182c17" stroke="#2e7d32" stroke-width="3">
+    <animate attributeName="stroke-width"
+             values="3;9;3"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+  <!-- Central impact point -->
+  <circle cx="100" cy="100" r="15" fill="#2e7d32">
+    <animate
+      attributeName="r"
+      values="15;20;15"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Ripple effects -->
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#4caf50" stroke-width="3" opacity="0.8">
+    <animate
+      attributeName="r"
+      values="30;50;70"
+      dur="2s"
+      repeatCount="indefinite"/>
+    <animate
+      attributeName="opacity"
+      values="0.8;0.1;0"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Secondary ripple -->
+  <circle cx="100" cy="100" r="40" fill="none" stroke="#4caf50" stroke-width="2" opacity="0.6">
+    <animate
+      attributeName="r"
+      values="40;60;80"
+      dur="2s"
+      begin="0.5s"
+      repeatCount="indefinite"/>
+    <animate
+      attributeName="opacity"
+      values="0.6;0.1;0"
+      dur="2s"
+      begin="0.5s"
+      repeatCount="indefinite"/>
+  </circle>
+  
+  
+  <!-- Impact lines -->
+  <g>
+    <!-- Top right -->
+    <line x1="115" y1="85" x2="140" y2="60" stroke="#81c784" stroke-width="4">
+      <animate
+        attributeName="x2"
+        values="140;145;140"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+      <animate
+        attributeName="y2"
+        values="60;55;60"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Bottom right -->
+    <line x1="115" y1="115" x2="140" y2="140" stroke="#81c784" stroke-width="4">
+      <animate
+        attributeName="x2"
+        values="140;145;140"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+      <animate
+        attributeName="y2"
+        values="140;145;140"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Top left -->
+    <line x1="85" y1="85" x2="60" y2="60" stroke="#81c784" stroke-width="4">
+      <animate
+        attributeName="x2"
+        values="60;55;60"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+      <animate
+        attributeName="y2"
+        values="60;55;60"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Bottom left -->
+    <line x1="85" y1="115" x2="60" y2="140" stroke="#81c784" stroke-width="4">
+      <animate
+        attributeName="x2"
+        values="60;55;60"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+      <animate
+        attributeName="y2"
+        values="140;145;140"
+        dur="1.5s"
+        repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>

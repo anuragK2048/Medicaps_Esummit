@@ -1,0 +1,164 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 4rem;
+  background-color: rgba(23, 26, 28, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  scale: 1.1;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 2.5rem;
+}
+
+.navbar-links a {
+  font-size: large;
+  text-decoration: none;
+  color: #47c32c;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: "Metropolis";
+  font-style: normal;
+  line-height: 64px;
+}
+
+.navbar-links a:hover {
+  border-bottom: solid 4px #fcde70;
+  color: #fcde70;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001; /* Above the menu background */
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #47c32c;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 2rem 4rem;
+    height: 160px;
+  }
+
+  .navbar-logo {
+    position: relative;
+    z-index: 1001; /* Keep logo above menu background */
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .hamburger {
+    display: block;
+    scale: 2;
+  }
+
+  .bar {
+    width: 30px;
+    height: 4px;
+    margin: 8px auto;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+
+  .navbar-links {
+    position: fixed;
+    left: -100%;
+    top: 0; /* Changed to start from top of screen */
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(23, 26, 28, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+
+    text-align: center;
+    transition: 0.5s;
+    padding: 160px 0 3rem 0; /* Top padding matches navbar height */
+    z-index: 1000; /* Below navbar elements */
+    overflow-y: auto; /* Allow scrolling if content is too tall */
+  }
+
+  .navbar-links.active {
+    left: 0;
+  }
+
+  .navbar-links li {
+    margin: 50px 0;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .navbar-links a {
+    font-size: 2.8rem;
+    line-height: normal;
+    display: block;
+    padding: 20px 0;
+  }
+}
+
+/* Keep consistent size across all mobile screens */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 2rem 4rem;
+  }
+
+  .navbar-links {
+    padding-top: 160px; /* Match navbar height */
+  }
+
+  .navbar-links a {
+    font-size: 2.8rem;
+  }
+
+  .navbar-links li {
+    margin: 50px 0;
+  }
+}

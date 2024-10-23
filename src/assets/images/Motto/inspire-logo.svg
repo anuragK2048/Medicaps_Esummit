@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Pulse animation for the outer circle -->
+    <animate 
+             attributeName="r"
+             values="88;92;88"
+             dur="2s"
+             repeatCount="indefinite"/>
+    
+    <!-- Glowing effect -->
+    <radialGradient id="bulbGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#76ff03">
+        <animate attributeName="stop-color"
+                 values="#76ff03;#4caf50;#76ff03"
+                 dur="2s"
+                 repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#4caf50"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer circle with pulse -->
+  <circle id="outer-circle" cx="100" cy="100" r="90" fill="#182c17" stroke="#2e7d32" stroke-width="3">
+    <animate attributeName="stroke-width"
+             values="3;9;3"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Central lightbulb with glow -->
+  <circle cx="100" cy="70" r="25" fill="url(#bulbGlow)">
+    <animate attributeName="r"
+             values="25;27;25"
+             dur="1.5s"
+             repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Animated rays -->
+  <g id="rays">
+    <path d="M100 20 L100 35 M60 60 L70 70 M140 60 L130 70 M20 100 L35 100 M180 100 L165 100" 
+          stroke="#4caf50" stroke-width="3">
+      <animate attributeName="stroke-width"
+               values="3;4;3"
+               dur="1s"
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+               values="1;0.6;1"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Bulb body -->
+  <path d="M100 40 Q100 40 100 90 M85 90 Q70 110 70 130 L130 130 Q130 110 115 90" 
+        fill="none" stroke="#2e7d32" stroke-width="3"/>
+  
+  <!-- Base of bulb -->
+  <rect x="75" y="130" width="50" height="10" fill="#2e7d32"/>
+  <rect x="85" y="140" width="30" height="5" fill="#2e7d32"/>
+  
+  <!-- Rotating corner circles -->
+  <g id="corner-circles">
+    <circle cx="50" cy="50" r="8" fill="#81c784">
+      <animateTransform attributeName="transform"
+                       type="rotate"
+                       from="0 100 100"
+                       to="360 100 100"
+                       dur="8s"
+                       repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="50" r="8" fill="#81c784">
+      <animateTransform attributeName="transform"
+                       type="rotate"
+                       from="0 100 100"
+                       to="360 100 100"
+                       dur="8s"
+                       repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="150" r="8" fill="#81c784">
+      <animateTransform attributeName="transform"
+                       type="rotate"
+                       from="0 100 100"
+                       to="360 100 100"
+                       dur="8s"
+                       repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="150" r="8" fill="#81c784">
+      <animateTransform attributeName="transform"
+                       type="rotate"
+                       from="0 100 100"
+                       to="360 100 100"
+                       dur="8s"
+                       repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
