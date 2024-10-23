@@ -4,10 +4,10 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
-// import ESummit from "./pages/E-Summit/ESummit";
-// import Archives from "./pages/Archives/Archives";
-// import OurTeam from "./pages/OurTeam/OurTeam";
-// import Contact from "./pages/Contact/Contact";
+import ESummit from "./pages/E-Summit/ESummit";
+import Archives from "./pages/Archives/Archives";
+import OurTeam from "./pages/OurTeam/OurTeam";
+import Contact from "./pages/Contact/Contact";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Footer from "./components/Footer/Footer";
 
@@ -32,22 +32,22 @@ export const router = createBrowserRouter(
           path: "/",
           element: <Homepage />,
         },
-        // {
-        //   path: "/esummit",
-        //   element: <ESummit />,
-        // },
-        // {
-        //   path: "/archives",
-        //   element: <Archives />,
-        // },
-        // {
-        //   path: "/ourteam",
-        //   element: <OurTeam />,
-        // },
-        // {
-        //   path: "/contact",
-        //   element: <Contact />,
-        // },
+        {
+          path: "/esummit",
+          element: <ESummit />,
+        },
+        {
+          path: "/archives",
+          element: <Archives />,
+        },
+        {
+          path: "/ourteam",
+          element: <OurTeam />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
       ],
     },
   ],

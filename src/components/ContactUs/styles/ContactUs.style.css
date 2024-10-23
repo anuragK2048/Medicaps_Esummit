@@ -1,0 +1,302 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting font family for the body */
+body {
+  /* background: #000000; */
+}
+
+/* Container for the main content */
+[data-component="contact-us"] .container {
+  margin-top: 100px;
+  width: 100%;
+  /* margin: 50px auto; */
+}
+
+/* Styling for main heading */
+[data-component="contact-us"] h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* Styling for paragraph text */
+[data-component="contact-us"] p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+/* Styling for contact box container */
+[data-component="contact-us"] .contact-box {
+  background: #ffffff;
+  display: flex;
+  border-radius: 20px;
+}
+
+/* Styling for left container inside the contact box */
+[data-component="contact-us"] .container-left {
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+
+/* Styling for right container inside the contact box */
+[data-component="contact-us"] .container-right {
+  flex-basis: 40%;
+  padding: 40px 60px;
+  background: hsl(132, 84%, 52%);
+  color: #ffffff;
+  border-radius: 0px 20px 20px 0px;
+}
+
+/* Styling for heading inside left container */
+[data-component="contact-us"] .container-left h3 {
+  font-size: 25px;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+/* Styling for heading inside right container */
+[data-component="contact-us"] .container-right h3 {
+  font-size: 25px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Styling for input rows */
+[data-component="contact-us"] .input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Styling for input groups inside input rows */
+[data-component="contact-us"] .input-row .input-group {
+  flex-basis: 45%;
+}
+
+/* Styling for input fields */
+[data-component="contact-us"] input {
+  width: 95%;
+  border: none;
+  color: #353535;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Styling for textareas */
+[data-component="contact-us"] textarea {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Styling for labels */
+[data-component="contact-us"] label {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  color: #000000;
+}
+
+/* Styling for buttons */
+[data-component="contact-us"] button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  background: #000000;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 20%;
+  height: 40px;
+  border-radius: 25px;
+  margin-top: 20px;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0px 5px 10px 0px #0000003a;
+}
+
+/* Hover styling for buttons */
+[data-component="contact-us"] button:hover {
+  color: #fff;
+  background: hsl(132, 84%, 52%);
+  box-shadow: 0px 5px 10px 0px #17cb3b;
+}
+
+/* Styling for table cells */
+[data-component="contact-us"] tr td:first-child {
+  font-size: 20px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+[data-component="contact-us"] tr td {
+  padding-top: 20px;
+  color: #000000;
+}
+
+/* Styling for iframes */
+[data-component="contact-us"] iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 30px;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1367px) {
+  [data-component="contact-us"] .container {
+    width: 70%;
+  }
+
+  [data-component="contact-us"] h1 {
+    font-size: 50px;
+  }
+
+  [data-component="contact-us"] p {
+    font-size: 25px;
+  }
+
+  [data-component="contact-us"] .container-left,
+  [data-component="contact-us"] .container-right {
+    padding: 40px;
+  }
+
+  [data-component="contact-us"] .input-row .input-group {
+    flex-basis: 48%;
+  }
+
+  [data-component="contact-us"] button {
+    width: 30%;
+  }
+}
+
+/* ... continue with the rest of your media queries following the same pattern ... */
+
+/* CSS for larger screens (laptop) */
+@media only screen and (max-width: 1366px) {
+  [data-component="contact-us"] .container {
+    width: 70%;
+  }
+
+  [data-component="contact-us"] .container h1 {
+    font-size: 45px;
+  }
+
+  [data-component="contact-us"] .container p {
+    font-size: 22px;
+  }
+
+  [data-component="contact-us"] .container-left,
+  [data-component="contact-us"] .container-right {
+    padding: 40px;
+  }
+
+  [data-component="contact-us"] input {
+    width: 90%;
+  }
+
+  [data-component="contact-us"] .input-row .input-group {
+    flex-basis: 48%;
+  }
+
+  [data-component="contact-us"] button {
+    width: 60%;
+  }
+}
+
+/* CSS for medium-sized screens (tablet) */
+@media only screen and (max-width: 1024px) {
+  [data-component="contact-us"] .contact-box {
+    flex-direction: column;
+  }
+
+  [data-component="contact-us"] .container {
+    width: 80%;
+  }
+
+  [data-component="contact-us"] .container h1 {
+    font-size: 40px;
+  }
+
+  [data-component="contact-us"] .container p {
+    font-size: 22px;
+  }
+
+  [data-component="contact-us"] .container-left,
+  [data-component="contact-us"] .container-right {
+    padding: 30px;
+  }
+
+  [data-component="contact-us"] .input-row {
+    flex-wrap: wrap;
+  }
+
+  [data-component="contact-us"] .input-row .input-group {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+
+  [data-component="contact-us"] button {
+    width: 25%;
+  }
+}
+
+/* CSS for smaller screens (mobile) */
+@media only screen and (max-width: 767px) {
+  [data-component="contact-us"] .container {
+    width: 90%;
+  }
+
+  [data-component="contact-us"] .container h1 {
+    font-size: 40px;
+  }
+
+  [data-component="contact-us"] .container p {
+    font-size: 18px;
+  }
+
+  [data-component="contact-us"] .container-left,
+  [data-component="contact-us"] .container-right {
+    padding: 20px;
+  }
+
+  [data-component="contact-us"] .input-row {
+    flex-direction: column; /* Stack input rows vertically */
+  }
+
+  [data-component="contact-us"] .input-row .input-group {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+
+  [data-component="contact-us"] input,
+  [data-component="contact-us"] textarea {
+    padding: 8px;
+  }
+
+  [data-component="contact-us"] button {
+    width: 60%;
+  }
+
+  [data-component="contact-us"] tr td:first-child {
+    font-size: 15px;
+    font-weight: 600;
+    padding-right: 10px;
+  }
+}

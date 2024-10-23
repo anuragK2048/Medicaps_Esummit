@@ -1,0 +1,182 @@
+#about-section{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 50px;
+}
+#About{
+    width: 100%;
+    height: 40%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.About-container{
+    padding: 50px;
+    width: 80%;
+    height: 80%;
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-txt{
+    width: 80%;
+}
+.about-txt h3{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.about-txt p{
+    width: 80%;
+    font-size: 18px;
+}
+.about-image{
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZd0LzY5rf6TP4IpdjkoME7pC2C7IAWLXpPg&s"); */
+    background-image: url("../assets/images/about.png");
+    background-position: center;
+    background-size: cover;
+    width: 25%;
+    height: 250px;
+    border-radius:25px ;
+}
+
+#Principle{
+    width: 100%;
+    height: 60%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prin-container{
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: #001f2d 0px 18px 45px -1px;
+    border-top: none;
+    width: 80%;
+    height: 80%;
+    display:flex;
+    justify-content: space-evenly;
+    cursor: cell;
+}
+.prin-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 200px;
+    height: 250px;
+}
+.prin-card div{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border: 4px solid darkcyan;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+}
+.prin-card div:hover{
+    margin-bottom: 25px;
+}
+.ideate{
+    background-image: url("../assets/images/ideate.gif");
+    background-position: center;
+    background-size: contain;
+}
+.inspire{
+    background-image: url("../assets/images/inspire.gif");
+    background-position: center;
+    background-size: contain;
+}
+.innovate{
+    background-image: url("../assets/images/innovate.gif");
+    background-position: center;
+    background-size: contain;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Styles for smartphones */
+    #about-section {
+        height: auto; /* Allow for flexible height */
+    }
+
+    #About {
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .About-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .about-txt {
+        width: 100%; /* Full width */
+        text-align: center; /* Center text */
+    }
+
+    .about-txt h3 {
+        font-size: 36px; /* Adjust font size */
+    }
+
+    .about-txt p {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .about-image {
+        width: 100%; /* Full width */
+        height: 200px; /* Adjust height */
+        margin-top: 20px; /* Space between text and image */
+    }
+
+    #Principle {
+        padding: 20px; /* Add padding */
+    }
+
+    .prin-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        width: 90%; /* Adjust width */
+        
+    }
+
+    .prin-card {
+        width: 80%; /* Adjust card width */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .prin-card div {
+        width: 100px; /* Adjust icon size */
+        height: 100px; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for very small screens */
+    .About-container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .about-image {
+        height: 150px; /* Adjust height */
+    }
+
+    .prin-card {
+        width: 100%; /* Full width cards */
+    }
+
+    .prin-card div {
+        width: 60px; /* Further reduce icon size */
+        height: 60px; /* Further reduce icon size */
+    }
+
+    .about-txt h3 {
+        font-size: 24px; /* Smaller heading */
+    }
+
+    .about-txt p {
+        font-size: 14px; /* Smaller text */
+    }
+}
