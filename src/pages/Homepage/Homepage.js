@@ -137,7 +137,7 @@ const ParticleBackground = ({ children }) => {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [Particle, options.lineColor, options.linkRadius, options.particleAmount]);
 
   const containerStyle = {
     position: "relative",
@@ -287,6 +287,7 @@ function MasonryHover() {
   const isMobile = useRef(window.innerWidth <= 700);
 
   useEffect(() => {
+    const currentRef = containerRefs.current;
     // Handle window resize
     const handleResize = () => {
       isMobile.current = window.innerWidth <= 700;
@@ -377,7 +378,7 @@ function MasonryHover() {
       if (scrollTimer.current) {
         clearTimeout(scrollTimer.current);
       }
-      containerRefs.current.forEach((container) => {
+      currentRef.forEach((container) => {
         // container.removeEventListener("mouseenter", () => {});
         // container.removeEventListener("mouseleave", () => {});
       });
@@ -444,8 +445,6 @@ function MasonryHover() {
         "Shark Tank is an exciting competition where aspiring entrepreneurs pitch their innovative business ideas to a panel of investors, or 'sharks', seeking funding and mentorship. Participants showcase their products or services, demonstrating the potential for growth and impact. This high-stakes event offers real-world experience in securing investment, while also providing valuable feedback and networking opportunities. Shark Tank fosters entrepreneurial drive, helping turn visionary ideas into successful ventures.",
     },
   ];
-
-  const initiativeDetails = [{}];
 
   return (
     <div className="wrapper2">
@@ -546,7 +545,7 @@ function Homepage() {
         <div className="motto-container">
           <div className="moto-1 motto-show">
             <div className="motto-image">
-              <img src={innovate_logo}></img>
+              <img src={innovate_logo} alt="Description of the image"></img>
             </div>
             <div className="motto-box">
               <h3 className="motto-heading">INNOVATE</h3>
@@ -560,7 +559,7 @@ function Homepage() {
           </div>
           <div className="moto-2 motto-show">
             <div className="motto-image">
-              <img src={inspire_logo}></img>
+              <img src={inspire_logo} alt="Description of the image"></img>
             </div>
             <div className="motto-box">
               <h3 className="motto-heading">INSPIRE</h3>
@@ -574,7 +573,7 @@ function Homepage() {
           </div>
           <div className="moto-3 motto-show">
             <div className="motto-image">
-              <img src={impact_logo}></img>
+              <img src={impact_logo} alt="Description of the image"></img>
             </div>
             <div className="motto-box">
               <h3 className="motto-heading">IMPACT</h3>
